@@ -21,10 +21,35 @@ function setup() {
 
 function draw() {
   background(roadImg);
-  
-  drawSprites();
- 
+
+  if(keyDown(LEFT_ARROW)){
+	   car.x = car.x -10 
+	}
+else if(keyDown(RIGHT_ARROW)){
+		car.x = car.x+10
+}
+else if(keyDown(UP_ARROW)){
+	car.y = car.y+10
+}
+else if(keyDown(DOWN_ARROW)){
+	car.y = car.y-10
 }
 
+if(keyPressed(w)){
+	boy.w = boy.w+10
+}
+else if(keyPressed(s)){
+	boy.s = boy.s-10
+}
+else if(keyPressed(a)){
+	boy.a = boy.a-10
+}
+else if(keyPressed(d)){
+	boy.d = boy.d+10
+}
+
+
+  drawSprites();
+}
 
 
